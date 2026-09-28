@@ -1,0 +1,67 @@
+{
+  "name": "cursor-git-pull-workspace",
+  "displayName": "Git Workspace",
+  "description": "Executa git pull, descarta alterações, troca e cria branches nos repositórios do workspace.",
+  "version": "0.4.2",
+  "publisher": "local",
+  "license": "MIT",
+  "keywords": ["git", "workspace", "pull", "branch", "multi-root"],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "main": "./out/extension.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursorGitPullWorkspace.pullAll",
+        "title": "Git: Pull em todos os repositórios do workspace",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "cursorGitPullWorkspace.discardAll",
+        "title": "Git: Limpar todas as alterações em todos os repositórios",
+        "icon": "$(discard)"
+      },
+      {
+        "command": "cursorGitPullWorkspace.switchAll",
+        "title": "Git: Trocar todos os repositórios para uma branch remota",
+        "icon": "$(git-branch)"
+      },
+      {
+        "command": "cursorGitPullWorkspace.createBranch",
+        "title": "Git: Criar branch a partir de outra nos repositórios selecionados",
+        "icon": "$(add)"
+      }
+    ],
+    "menus": {
+      "scm/title": [
+        {
+          "command": "cursorGitPullWorkspace.pullAll",
+          "group": "navigation@100"
+        },
+        {
+          "command": "cursorGitPullWorkspace.discardAll",
+          "group": "navigation@90"
+        },
+        {
+          "command": "cursorGitPullWorkspace.switchAll",
+          "group": "navigation@80"
+        },
+        {
+          "command": "cursorGitPullWorkspace.createBranch",
+          "group": "navigation@70"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.8.0"
+  }
+}
