@@ -1,10 +1,11 @@
 {
-  "name": "cursor-git-pull-workspace",
-  "displayName": "Git Workspace",
+  "name": "git-multi-repo-actions",
+  "displayName": "All-Repos Git Toolbar",
   "description": "Executa git pull, descarta alterações, troca e cria branches nos repositórios do workspace.",
-  "version": "0.4.2",
-  "publisher": "local",
+  "version": "0.4.7",
+  "publisher": "git-workspace",
   "license": "MIT",
+  "icon": "icon.png",
   "keywords": ["git", "workspace", "pull", "branch", "multi-root"],
   "engines": {
     "vscode": "^1.85.0"
