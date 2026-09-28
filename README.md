@@ -1,4 +1,4 @@
-# All-Repos Git Toolbar
+# Git Workspace
 
 Extensão do Cursor com ações Git para todos os repositórios do workspace.
 
